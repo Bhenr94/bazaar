@@ -16,7 +16,7 @@ void produce(int produceBound) {
     while (1) {
         // Simulate a non-trivial produce.
         randomwait(produceBound);
-        item = (rand() % ITEM_BOUND) + 1;
+        item = rand() % ITEM_BOUND;
         printf("Produced %d.\n", item);
 
         sem_wait(empty);
